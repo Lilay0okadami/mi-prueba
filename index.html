@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio Pro</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Ruta relativa correcta -->
+</head>
+<body>
+    <div class="container">
+        <div class="audio-player">
+            <h1>Mi Música</h1>
+            <div class="cover">
+                <!-- Se corrigió la ruta de la imagen agregando 'multi/' al inicio -->
+                <img src="multi/img/cover.jpg" alt="Portada"> 
+            </div>
+            
+            <!-- Audio con ruta relativa desde index.html -->
+            <audio controls>
+                <source src="multi/audio/1.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+            </audio>
+            
+            <div class="info">
+                <p>Reproduciendo: <span>1.mp3</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
