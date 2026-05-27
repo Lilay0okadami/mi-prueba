@@ -3,28 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Audio Pro</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Ruta relativa correcta -->
+    <title>Nuestra Melodía ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="audio-player">
-            <h1>Mi Música</h1>
+            <h1 class="title">Para Ti ❤️</h1>
+            
             <div class="cover">
-                <!-- Se corrigió la ruta de la imagen agregando 'multi/' al inicio -->
-                <img src="multi/img/cover.jpg" alt="Portada"> 
+                <img id="cover-img" src="multi/img/cover.jpg" alt="Nuestra Foto">
             </div>
             
-            <!-- Audio con ruta relativa desde index.html -->
-            <audio controls>
-                <source src="multi/audio/1.mp3" type="audio/mpeg">
-                Tu navegador no soporta audio HTML5.
+            <div class="info">
+                <p id="song-title">Cargando...</p>
+                <span>Nuestra Playlist Especial</span>
+            </div>
+
+            <audio id="audio-element">
+                <source id="audio-source" src="multi/audio/1.mp3" type="audio/mpeg">
+                Tu navegador no soporta HTML5.
             </audio>
             
-            <div class="info">
-                <p>Reproduciendo: <span>1.mp3</span></p>
+            <div class="controls">
+                <button id="btn-prev" class="control-btn">
+                    <span>&#9664;&#9664;</span> Atrás
+                </button>
+                
+                <button id="btn-play" class="control-btn play-btn">
+                    <span id="play-icon">&#9654;</span>
+                </button>
+                
+                <button id="btn-next" class="control-btn">
+                    Próximo <span>&#9654;&#9654;</span>
+                </button>
             </div>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
